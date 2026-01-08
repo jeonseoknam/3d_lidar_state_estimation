@@ -9,6 +9,7 @@ mapping demo(15x speed)
 localization demo(ndt scan matcher + ekf localizer, 3x speed)
 
 ![Demo GIF](assets/real_world_car.gif)
+<br>
 real world car drive demo(1.5x speed)
 
 

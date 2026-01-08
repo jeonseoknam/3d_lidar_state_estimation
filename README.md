@@ -6,7 +6,10 @@
 mapping demo(15x speed)
 
 ![Demo GIF](assets/ndt_ekf_localization_x3.gif)
-localization demo(ndt scan matcher + ekf localizer, x3 speed)
+localization demo(ndt scan matcher + ekf localizer, 3x speed)
+
+![Demo GIF](assets/real_world_car.gif)
+real world car drive demo(1.5x speed)
 
 
 # Target HW

@@ -1,0 +1,27 @@
+<launch>
+  <arg name="param_file" default="$(find-pkg-share ekf_localizer)/config/ekf_localizer.param.yaml"/>
+  <arg name="ekf_mode" default="lidar"/>
+  <arg name="ekf_node_name" default="ekf_localizer"/>
+
+  <!-- Livox Pose 변환 노드 실행 -->
+  <node pkg="pose_to_pose_with_cov" exec="pose_to_pose_with_cov" name="pose_converter" output="screen"/>
+
+  <!-- EKF Localizer 실행 -->
+  <node pkg="ekf_localizer" exec="ekf_localizer" name="$(var ekf_node_name)" output="screen">
+    <!-- Pose 입력: 변환된 토픽 -->
+    <remap from="in_pose_with_covariance" to="/ndt_pose_with_covariance"/>
+    <!-- Twist 입력: Gyro Odometer 출력 -->
+    <remap from="in_twist_with_covariance" to="/gyro_twist_with_covariance"/>
+
+    <remap from="initialpose" to="initialpose"/>
+    <remap from="trigger_node_srv" to="trigger_node"/>
+
+    <param from="$(var param_file)"/>
+    <param name="ekf_mode" value="$(var ekf_mode)"/>
+    <param name="pose_frame_id" value="map"/>
+    <param name="use_sim_time" value="false"/>
+  </node>
+
+
+  <node pkg="initial_pose_publisher" exec="lidar2initialpose" name="lidar2initialpose"/>
+</launch>

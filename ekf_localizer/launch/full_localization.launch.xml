@@ -1,0 +1,7 @@
+<launch>
+	<include file="$(find-pkg-share odom_to_twist_converter)/launch/odom_to_twist_converter.launch.xml" />
+	<include file="$(find-pkg-share gyro_odometer)/launch/gyro_odometer.launch.xml" />
+	<include file="$(find-pkg-share ekf_localizer)/launch/ekf_localizer.launch.xml" />
+	<include file="$(find-pkg-share lidarslam)/launch/localization.launch.py" />
+	<include file="$(find-pkg-share carstate_3d)/launch/carstate_3d_launch.py"/>
+</launch>	

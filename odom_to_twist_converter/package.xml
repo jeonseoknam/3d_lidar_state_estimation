@@ -1,0 +1,17 @@
+<package format="3">
+  <name>odom_to_twist_converter</name>
+  <version>0.0.1</version>
+  <description>Convert /odom to /vehicle/twist_with_covariance</description>
+  <maintainer email="you@example.com">Your Name</maintainer>
+  <license>Apache-2.0</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <depend>rclcpp</depend>
+  <depend>nav_msgs</depend>
+  <depend>geometry_msgs</depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>
+

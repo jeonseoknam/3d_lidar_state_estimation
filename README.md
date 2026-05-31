@@ -13,7 +13,7 @@ localization demo(ndt scan matcher + ekf localizer, 3x speed)
 real world car drive demo(1.5x speed)
 
 # Node Graph
-
+![Node Graph](assets/node_graph.png)
 
 # Target HW
 - NVIDIA AGX Orin

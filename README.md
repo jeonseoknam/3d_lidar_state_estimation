@@ -49,7 +49,7 @@ source install/setup.bash
 
 # Usage
 All pipelines start by bringing up the LiDAR driver, which publishes `/livox/lidar`
-(point cloud) and `/sensors/imu/raw, /odom` from VESC(optional):
+(point cloud) and `/sensors/imu/raw `, `/odom` from VESC (optional):
 
 ## 1. Mapping
 Build a point-cloud map with the scan matcher and graph-based loop closure.

@@ -10,18 +10,18 @@ scan_matcher:
     vg_size_for_map: 0.16
     use_min_max_filter: true
     scan_min_range: 0.5
-    scan_max_range: 15.0
+    scan_max_range: 100.0
     scan_period: 0.1
     enable_angle_filter: false
     fov_deg: 240.0
     set_initial_pose: true
-    initital_pose_x: 18.8899
-    initital_pose_y: 6.3295
-    initital_pose_z: 0.0
-    initital_pose_qx: 0.0
-    initital_pose_qy: 0.0
-    initital_pose_qz: 0.999477
-    initital_pose_qw: 0.0323506
+    initial_pose_x: 18.8899
+    initial_pose_y: 6.3295
+    initial_pose_z: 0.0
+    initial_pose_qx: 0.0
+    initial_pose_qy: 0.0
+    initial_pose_qz: 0.999477
+    initial_pose_qw: 0.0323506
     use_imu: false
     use_odom: false
     map_path: "/home/misys/forza_ws/race_stack/state_estimation/src/maps/teras/map.pcd"
@@ -32,12 +32,6 @@ scan_matcher:
     num_targeted_cloud: 15
     map_publish_period: 15.0
 
-    # debug
-    debug_sim_time: false
-    debug_wall_time: false
-    debug_flag: false
-    metrics_csv_path: "/home/misys/ws_livox/data/4F_e2e_time.csv"
-
 
 graph_based_slam:
     ros__parameters:
@@ -46,8 +40,8 @@ graph_based_slam:
       ndt_num_threads: 2
       voxel_leaf_size: 0.4
       loop_detection_period: 1000
-      threshold_loop_closure_score: 0.7
-      distance_loop_closure: 100.0
+      threshold_loop_closure_score: 1.0
+      distance_loop_closure: 20.0
       range_of_searching_loop_closure: 20.0
       search_submap_num: 10
       num_adjacent_pose_cnstraints: 5

@@ -32,7 +32,7 @@ def generate_launch_description():
     tf = launch_ros.actions.Node(
         package='tf2_ros',
         executable='static_transform_publisher',
-        arguments=['0.3','0','0','0','0','0.7171','0.7171','base_link','livox_frame']
+        arguments=['0.27','0','0.07','0','0','0.7171','0.7171','base_link','livox_frame']
         )
 
 

@@ -14,7 +14,7 @@ real world car drive demo(1.5x speed)
 
 # Node Graph
 <p align="center">
-  <img src="assets/node_graph.png" alt="Node Graph" width="800"/>
+  <img src="assets/node_graph_2.png" alt="Node Graph" width="800"/>
 </p>
 
 # Target HW
